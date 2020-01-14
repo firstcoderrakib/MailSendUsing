@@ -15,7 +15,38 @@
     <div> 
         @using (Html.BeginForm("Index", "EmailSetup", FormMethod.Post, new { enctype="maltipart/form-data"}))
         {
-
+        <center>
+            <h1>How To Configure SMTP of Gmail</h1>
+            <h2>Using MVC - 5 (asp.net)</h2>
+            <hr/>
+            <table>
+                <tr>
+                    <td style="width:80px">
+                        To:
+                    </td>
+                    <td>@Html.TextBoxFor(model => model.To)</td>
+                </tr>
+                <tr>
+                    <td>
+                        Subject:
+                    </td>
+                    <td>@Html.TextBoxFor(model => model.Subject)</td>
+                </tr>
+                <tr>
+                    <td style="width:80px">
+                        Body:
+                    </td>
+                    <td>@Html.TextAreaFor(model => model.Body, new { rows = "15", cols = "25" })</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Send" />
+                    </td>
+                </tr>
+            </table>
+            <br/>
+            <span style="color:green">@ViewBag.Message</span>
+        </center>
         }
     </div>
 </body>

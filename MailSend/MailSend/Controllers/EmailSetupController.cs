@@ -28,11 +28,11 @@ namespace MailSend.Controllers
             smtp.Port = 587;
             smtp.EnableSsl = true;
 
-            NetworkCredential nc = new NetworkCredential("rakibcse880@gmail.com","rakib");
+            NetworkCredential nc = new NetworkCredential("rakibcse880@gmail.com","r@#132152770&*");
             smtp.UseDefaultCredentials = true;
             smtp.Credentials = nc;
             smtp.Send(mm);
-            ViewBag.Message ="Mail Has Been Sent Successfully"
+            ViewBag.Message = "Mail Has Been Sent Successfully";
             return View();
         }
     }
